@@ -1,32 +1,25 @@
 ## Minecraft Username Availability Checker
 
-This Python script checks the availability of Minecraft usernames using the Mojang API. It reads a list of usernames from a text file, sends requests to the Mojang API to check the availability of each username, and writes the results to two separate text files.
+This Program checks the availability of Minecraft usernames using the Mojang API, managing retries, delays, and optional multithreading, and outputs the results into two separate text files.
 
-### Features
+### How to use
 
-- Read list of usernames from a text file
-- Check username availability using Mojang API
-- Write available and in-use usernames to separate text files
-- Configurable number of retries per username
-- Configurable delay between retries and requests
-- Option to enable multithreading with configurable number of threads
+1. **Download the program**: Click on the `Checker.zip` file in the GitHub repository and then click the `Download` button. Once downloaded, extract the contents of the zip file to your desired location.
 
-### Usage
+2. **Prepare the usernames**: Open the `usernames.txt` file that you extracted from the zip file. Add the Minecraft usernames that you want to check, one username per line, and save the file.
 
-1. Prepare a text file named `usernames.txt` with the list of usernames to check, one username per line.
-2. Run the script: `python mc_username_checker.py`
-3. The script will prompt you for the following inputs:
+3. **Run the program**: Double-click on the `mc_username_checker.exe` file to run the program. The program will prompt you for the following inputs:
    - Number of retries for each username (0-10)
    - Delay (in seconds) between each retry (0-60)
    - Delay (in seconds) between each request (0-25)
    - Enable multithreading? (yes/no)
    - If multithreading is enabled, number of threads (1-50000)
-4. The script will check the availability of each username and write the results to `available.txt` and `in_use.txt`.
 
-### Requirements
+4. **View the results**: After the program finishes running, you'll find two new text files in the same directory: `available.txt` contains the usernames that are available, and `in_use.txt` contains the usernames that are currently in use.
 
-- Python 3.6+
-- `requests` library
+### Source Code
+
+The `source_code.py` file in the GitHub repository contains the source code of the program. This is provided for educational purposes, for those who want to understand how the program works, or for those who wish to contribute to the project. You don't need to download this file to use the program.
 
 ### Notes
 
